@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Esta es la manera de "importar" librerias en HTML, usan este TAG "script"
+    y en el atributo "src" ponen la URL de lo que necesitan.
+    En este caso la URL la pueden sacar del repositorio oficial
+    https://github.com/ReactiveX/rxjs#cdn -->
+    <script src="https://unpkg.com/rxjs@^7/dist/bundles/rxjs.umd.min.js"></script>
+
+    <title>Consigna 1</title>
+  </head>
+  <body>
+    <input type="text" id="userInput" />
+    <label id="response"></label>
+  </body>
+
+  <!-- Dentro de este TAG "script" pueden escribir código JS -->
+  <script>
+    // Para la Consigna 2, tienen que usar la documentación oficial 
+    // de "Operadores" de RxJS --> https://rxjs.dev/guide/operators#categories-of-operators
+    
+    const { Observable, fromEvent /*pipe*/ } = rxjs;
+    // const { filter, map } = rxjs.operators;
+
+    // Resto de la magia...
+  </script>
+</html>
