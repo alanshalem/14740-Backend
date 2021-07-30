@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=, initial-scale=1.0" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/rxjs/6.6.3/rxjs.umd.min.js"></script>
+    <title>Ejemplo</title>
+  </head>
+  <body>
+    <div>Dentro del DIV</div>
+    <p></p>
+    Fuera del DIV
+
+    <script>
+      const { fromEvent } = rxjs;
+      const { map, filter } = rxjs.operators;
+
+      const clicks = fromEvent(document, "click");
+      clicks.subscribe(() => console.log("Click!"));
+
+      const positions = clicks.pipe(map((event) => event.clientX));
+      positions.subscribe((value) => console.log(value));
+
+      const clicksOnDivs = clicks.pipe(
+        filter((event) => event.target.tagName === "DIV")
+      );
+      clicksOnDivs.subscribe(() => console.log("Click en el DIV!"));
+    </script>
+  </body>
+</html>

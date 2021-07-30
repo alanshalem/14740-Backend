@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/rxjs/6.6.3/rxjs.umd.min.js"></script>
+    <title>Desafio</title>
+  </head>
+  <body>
+    <script>
+      // const { Observable } = rxjs;
+
+      // function contador(valorInicial) {
+      //   let contador = valorInicial;
+      //   return new Observable((observer) => {
+      //     setInterval(() => {
+      //       observer.next(contador++);
+      //     }, 1000);
+      //   });
+      // }
+
+      // const observer = {
+      //   next: (contador) => console.log(contador),
+      // };
+      // contador(123).subscribe(observer);
+
+      ///////////////
+
+      function contador(valorInicial) {
+        let contador = valorInicial;
+        return new Promise((resolve) => {
+          setInterval(() => {
+            resolve(contador++);
+          }, 1000);
+        });
+      }
+
+      contador(123).then((contador) => console.log(contador));
+    </script>
+  </body>
+</html>
