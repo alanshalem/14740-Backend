@@ -1,0 +1,7 @@
+GET /mascotas/listar HTTP/1.1
+Host: localhost:8080
+
+###
+
+GET /personas/listar HTTP/1.1
+Host: localhost:8080

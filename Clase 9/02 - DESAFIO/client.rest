@@ -1,0 +1,31 @@
+GET /mascotas/listar HTTP/1.1
+Host: localhost:8080
+
+###
+
+POST /mascotas/guardar HTTP/1.1
+Host: localhost:8080
+Content-Type: application/json
+
+{
+  "nombre": "michi",
+  "raza": "gato",
+  "edad": 2
+}
+
+###
+
+GET /personas/listar HTTP/1.1
+Host: localhost:8080
+
+###
+
+POST /personas/guardar HTTP/1.1
+Host: localhost:8080
+Content-Type: application/json
+
+{
+  "nombre": "Juan",
+  "apellido": "Gonzales",
+  "edad": 2
+}

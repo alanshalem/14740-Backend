@@ -1,0 +1,17 @@
+GET /algo.txt HTTP/1.1
+Host: localhost:8080
+
+###
+
+GET /otraCosa.txt HTTP/1.1
+Host: localhost:8080
+
+###
+
+GET /path1/algo.txt HTTP/1.1
+Host: localhost:8080
+
+###
+
+GET /path2/otraCosa.txt HTTP/1.1
+Host: localhost:8080

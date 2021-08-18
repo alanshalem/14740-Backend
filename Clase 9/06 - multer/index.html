@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formularios de Ingreso</title>
+  </head>
+  <body>
+    <form action="/uploadfile" enctype="multipart/form-data" method="POST">
+      <input type="file" name="Single" />
+      <input type="submit" value="Subir archivo" />
+    </form>
+    <form action="/uploadmultiple" enctype="multipart/form-data" method="POST">
+      Imagenes: <input type="file" name="Multi" multiple />
+      <input type="submit" value="Subir archivos" />
+    </form>
+  </body>
+</html>

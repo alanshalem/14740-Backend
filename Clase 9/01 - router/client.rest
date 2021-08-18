@@ -1,0 +1,7 @@
+GET /hola/get HTTP/1.1
+Host: localhost:8080
+
+###
+
+GET /hola/post HTTP/1.1
+Host: localhost:8080
