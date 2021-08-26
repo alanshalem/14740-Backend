@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('../partials/head', {title: 'Hello Partials!'}); %>
+  </head>
+  <body>
+    <header><%- include('../partials/header'); %></header>
+    <main>
+      <h2>Variable</h2>
+      <p><%= tagline %></p>
+      <ul>
+        <% mascots.forEach(function(mascot) { %>
+        <li>
+          <strong><%= mascot.name %></strong> representing <%= mascot.organization %>, born <%= mascot.birthYear %>
+        </li>
+        <% }); %>
+      </ul>
+    </main>
+  </body>
+  <footer><%- include('../partials/footer'); %></footer>
+</html>
