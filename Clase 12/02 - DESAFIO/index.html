@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/rxjs/6.6.3/rxjs.umd.min.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <input id="texto" type="text" />
+    <button id="button" type="submit">Enviar</button>
+    <br />
+    <label id="label"></label>
+    <script>
+      const { Observable, fromEvent } = rxjs;
+      const socket = io();
+
+      const button = document.querySelector("#button");
+      fromEvent(button, "click").subscribe({
+        next: (value) => {
+          socket.emit("input", {
+            socketId: socket.id,
+            message: document.querySelector("#texto").value,
+          });
+        },
+      });
+
+      socket.on("inputAll", (data) => {
+        document.querySelector("#label").innerHTML = "";
+        for (const element of data) {
+          document.querySelector(
+            "#label"
+          ).innerHTML += `SocketId: ${element.socketId} | Mensaje: ${element.message}<br>`;
+        }
+      });
+    </script>
+  </body>
+</html>
