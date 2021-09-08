@@ -1,0 +1,2 @@
+GET /
+Host: localhost:8080

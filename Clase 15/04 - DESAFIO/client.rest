@@ -1,0 +1,27 @@
+GET /perimetro/cuadrado?lado=8
+Host: localhost:8080
+
+###
+
+GET /perimetro/rectangulo?base=5&altura=10
+Host: localhost:8080
+
+###
+
+GET /perimetro/circulo?radio=3
+Host: localhost:8080
+
+###
+
+GET /superficie/cuadrado?lado=5
+Host: localhost:8080
+
+###
+
+GET /superficie/rectangulo?base=5&altura=10
+Host: localhost:8080
+
+###
+
+GET /superficie/circulo?radio=3
+Host: localhost:8080

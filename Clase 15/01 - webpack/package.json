@@ -1,0 +1,18 @@
+{
+  "name": "01---webpack",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "prod": "./node_modules/.bin/webpack ./index1.js ./index2.js ./index3.js -o bundle.js --mode=production -w",
+    "dev": "./node_modules/.bin/webpack ./index1.js ./index2.js ./index3.js -o bundle.js --mode=development -w",
+    "start": "nodemon ./bundle.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "webpack": "^4.46.0",
+    "webpack-cli": "^3.3.12"
+  }
+}
