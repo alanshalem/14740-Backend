@@ -1,0 +1,16 @@
+{
+  "dependencies": {
+    "knex": "^0.95.9",
+    "sqlite3": "^5.0.2"
+  },
+  "name": "03---sqlite3",
+  "version": "1.0.0",
+  "main": "01 - create_table.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
