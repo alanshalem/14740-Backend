@@ -1,0 +1,3 @@
+use admin
+db.createUser({user:'lector', pwd:"123456",roles:[{role: 'read',db:'blog'}]})
+db.createUser({user:'escritor', pwd:"123456",roles:[{role: 'readWrite',db:'blog'}]})

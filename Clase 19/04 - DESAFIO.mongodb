@@ -1,0 +1,10 @@
+mongod --dbpath ./base
+use admin
+db.createUser({user:'encargado', pwd:"qwerty123", roles:[{ role: 'readWrite', db:'empresa' }]})
+use empresa
+db.clientes.insertMany([{ nombre: "Juan", apellido: "Perez" },{ nombre: "Jose", apellido: "Gonzales" }])
+
+mongod --dbpath ./base --auth
+mongo -u encargado -p qwerty123
+use empresa
+db.clientes.find({}, { nombre:1 })

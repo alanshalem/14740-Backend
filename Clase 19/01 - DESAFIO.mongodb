@@ -1,0 +1,17 @@
+use empresa
+db.clientes.insert([
+  {nombre: 'Juan', edad: 21},
+  {nombre: 'Jose', edad: 22},
+  {nombre: 'Nahuel', edad: 23}
+])
+db.articulos.insert([
+  {nombre: 'Chocolate', precio: 11, stock: 45 },
+  {nombre: 'Alfajor', precio: 22, stock: 436 },
+  {nombre: 'Caramelo', precio: 33, stock: 156 },
+  {nombre: 'Ether', precio: 44, stock: 426 }
+])
+show collections
+db.clientes.find()
+db.articulos.find()
+db.clientes.findOne()._id.getTimestamp()
+db.articulos.count()
