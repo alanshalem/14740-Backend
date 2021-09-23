@@ -1,0 +1,28 @@
+show dbs
+
+use sistema
+
+db.usuarios.insertOne({nombre: 'Pepe', edad: 25})
+
+db.usuarios.find()
+
+show collections
+
+db.usuarios.insertMany([
+  {nombre: 'Nicolas', edad: 32},
+  {nombre: 'Juan', edad: 24},
+  {nombre: 'Lucas', edad: 28},
+])
+
+db.usuarios.find()
+
+db.productos.insertMany([
+  {nombre: 'Mermelada', precio: 100, stock: 10},
+  {nombre: 'Chocolate', precio: 200, stock: 20},
+  {nombre: 'Bitcoin', precio: 300, stock: 30},
+  {nombre: 'Alfajo', precio: 400, stock: 40}
+])
+
+show collections
+
+db.productos.find()
