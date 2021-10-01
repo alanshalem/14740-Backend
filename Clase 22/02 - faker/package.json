@@ -1,0 +1,8 @@
+{
+  "name": "02---faker",
+  "version": "1.0.0",
+  "license": "ISC",
+  "dependencies": {
+    "faker": "^5.5.3"
+  }
+}

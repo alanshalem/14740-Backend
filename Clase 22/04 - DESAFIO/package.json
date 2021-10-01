@@ -1,0 +1,9 @@
+{
+  "name": "04---desafio",
+  "version": "1.0.0",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "faker": "^5.5.3"
+  }
+}

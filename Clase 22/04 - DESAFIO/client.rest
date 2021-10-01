@@ -1,0 +1,12 @@
+GET /test HTTP/1.1
+Host: localhost:8080
+
+###
+
+GET /test?cant=5 HTTP/1.1
+Host: localhost:8080
+
+###
+
+GET /test?cant=A HTTP/1.1
+Host: localhost:8080

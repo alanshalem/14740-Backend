@@ -1,0 +1,41 @@
+GET /api/generar/3 HTTP/1.1
+Host: localhost:8080
+
+###
+
+GET /api/2 HTTP/1.1
+Host: localhost:8080
+
+###
+POST /api HTTP/1.1
+Host: localhost:8080
+Content-Type: application/json
+
+{
+  "nombre": "44444444",
+  "email": "44444444@yahoo.com",
+  "website": "https://44444444.com.es",
+  "image": "https://44444444.jpg",
+  "id": 2,
+  "fecha": "8/22/2060, 2:39:15 PM"
+}
+
+###
+
+GET /api HTTP/1.1
+Host: localhost:8080
+
+###
+PUT /api/2 HTTP/1.1
+Host: localhost:8080
+Content-Type: application/json
+
+{
+  "nombre": "222222222",
+  "email": "222222222@yahoo.com"
+}
+
+###
+
+DELETE /api/3 HTTP/1.1
+Host: localhost:8080
