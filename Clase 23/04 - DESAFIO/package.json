@@ -1,0 +1,12 @@
+{
+  "name": "04---desafio",
+  "version": "1.0.0",
+  "main": "holding.mjs",
+  "scripts": {
+    "start": "nodemon"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "normalizr": "^3.6.1"
+  }
+}

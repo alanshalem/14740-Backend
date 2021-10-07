@@ -1,0 +1,12 @@
+{
+  "name": "03---normalizr",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "nodemon"
+  },
+  "main": "blog.mjs",
+  "license": "ISC",
+  "dependencies": {
+    "normalizr": "^3.6.1"
+  }
+}
