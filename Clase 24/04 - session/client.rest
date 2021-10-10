@@ -1,0 +1,22 @@
+GET /login?username=amy&password=amypassword
+Host: localhost:8080
+
+###
+
+GET /login?username=edgar&password=btc
+Host: localhost:8080
+
+###
+
+GET /content
+Host: localhost:8080
+
+###
+
+GET /con-session
+Host: localhost:8080
+
+###
+
+GET /logout
+Host: localhost:8080

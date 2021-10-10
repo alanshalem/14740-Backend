@@ -1,0 +1,12 @@
+GET /root
+Host: localhost:8080
+
+###
+
+GET /root?nombre=Juan
+Host: localhost:8080
+
+###
+
+GET /olvidar
+Host: localhost:8080

@@ -1,0 +1,9 @@
+{
+  "name": "04---session",
+  "version": "1.0.0",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-session": "^1.17.2"
+  }
+}

@@ -1,0 +1,22 @@
+GET /set HTTP/1.1
+Host: localhost:8080
+
+###
+
+GET /setEX HTTP/1.1
+Host: localhost:8080
+
+###
+
+GET /get HTTP/1.1
+Host: localhost:8080
+
+###
+
+GET /getEX HTTP/1.1
+Host: localhost:8080
+
+###
+
+GET /clear HTTP/1.1
+Host: localhost:8080
