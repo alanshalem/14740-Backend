@@ -12,7 +12,7 @@ app.use(
   expressSession({
     store: connectMongo.create({
       // mongoUrl: 'mongodb://localhost/sesiones',
-      mongoUrl: 'mongodb+srv://edgar:A147852z@cluster0.be9st.mongodb.net/clase25?retryWrites=true&w=majority',
+      mongoUrl: 'mongodb+srv://usuario:clave@cluster0.be9st.mongodb.net/clase25?retryWrites=true&w=majority',
     }),
     secret: 'BTC100K',
     resave: false,
