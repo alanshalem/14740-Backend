@@ -1,0 +1,7 @@
+GET /
+Host: localhost:8080
+
+###
+
+GET /logout
+Host: localhost:8080

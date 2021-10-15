@@ -1,0 +1,20 @@
+keys *
+
+set llave1 valor1
+set llave2 valor2
+set llave3 valor3
+set llave4 valor4
+set llave5 valor5
+
+keys *
+
+get llave1
+get llave2
+get llave3
+get llave4
+get llave5
+
+set llave6 valor6 ex 30
+get llave6
+ttl llave6
+
