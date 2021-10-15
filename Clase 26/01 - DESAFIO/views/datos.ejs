@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Datos</title>
+  </head>
+  <body>
+    <div>
+      <label>Nombre:</label>
+      <span><%= nombre %></span>
+    </div>
+    <div>
+      <label>Direccion:</label>
+      <span><%= direccion %></span>
+    </div>
+    <div>
+      <label>Password:</label>
+      <span><%= password %></span>
+    </div>
+    <form action="/" method="GET">
+      <button type="submit">Volver</button>
+    </form>
+    <form action="/logout" method="GET">
+      <button type="submit">Logout</button>
+    </form>
+  </body>
+</html>
