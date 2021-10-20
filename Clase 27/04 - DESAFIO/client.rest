@@ -1,0 +1,27 @@
+POST /register
+Host: localhost:8080
+Content-Type: application/json
+
+{
+  "nombre": "Juan",
+  "password": 1234,
+  "direccion": "btc@moon.com"
+}
+
+###
+
+POST /login
+Host: localhost:8080
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJub21icmUiOiJKdWFuIiwiZGlyZWNjaW9uIjoiYnRjQG1vb24uY29tIiwiaWF0IjoxNjM0NTg2NTY2LCJleHAiOjE2MzQ1ODY2MjZ9.Y80ZOE8Zb7uhqTuxopWiGc49xVjPAH7IVfwy8-5vr6w
+Content-Type: application/json
+
+{
+  "nombre": "Juan",
+  "password": 1234
+}
+
+###
+
+GET /datos
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJub21icmUiOiJKdWFuIiwiZGlyZWNjaW9uIjoiYnRjQG1vb24uY29tIiwiaWF0IjoxNjM0NTg2NTY2LCJleHAiOjE2MzQ1ODY2MjZ9.Y80ZOE8Zb7uhqTuxopWiGc49xVjPAH7IVfwy8-5vr6w
+Host: localhost:8080
