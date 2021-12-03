@@ -24,8 +24,8 @@ app.listen(
 // #region Routes
 
 const client = twilio(
-  'ACa9a943925449a45b9f8fe7056da155ee',
-  '70e18e2124d116a3cebb2f34f9158934',
+  '...',
+  '...',
 );
 
 app.post(
