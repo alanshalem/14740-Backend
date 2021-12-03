@@ -1,0 +1,13 @@
+{
+  "name": "01-desafio",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "nodemon"
+  },
+  "dependencies": {
+    "clase37npm": "^1.0.0",
+    "express": "^4.17.1"
+  }
+}
