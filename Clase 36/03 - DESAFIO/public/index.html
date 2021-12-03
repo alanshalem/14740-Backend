@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <h1>Enviar un mensaje de Whatsapp</h1>
+  <form action="/send" method="post">
+    <div>
+      <span>Número de teléfono:</span>
+      <input type="text" name="numero">
+    </div>
+    <div>
+      <span>Mensaje:</span>
+      <input type="tel" name="mensaje">
+    </div>
+    <div>
+      <span>Adjunto (opcional):</span>
+      <input type="url" name="adjunto">
+    </div>
+    <button type="submit">Ok</button>
+  </form>
+</body>
+
+</html>
