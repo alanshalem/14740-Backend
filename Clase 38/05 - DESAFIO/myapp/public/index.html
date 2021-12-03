@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <h1 id="mensaje"></h1>
+  <form onsubmit="agregarArticulo(event)">
+    <div>
+      <label>Titulo</label>
+      <input type="text" name="titulo" id="titulo">
+    </div>
+    <div>
+      <label>Texto</label>
+      <input type="text" name="texto" id="texto">
+    </div>
+    <div>
+      <label>Autor</label>
+      <input type="text" name="autor" id="autor">
+    </div>
+    <button type="submit">Aceptar</button>
+  </form>
+
+  <form onsubmit="articulos(event)">
+    <button type="submit">Listar!</button>
+  </form>
+
+  <pre id="articulos"></pre>
+
+  <script>
+    let query;
+    let variables;
+
+    // Obtiene el mensaje de GraphQL y lo setea en el <h1 id="mensaje">
+    (() => {
+      query = `{
+                mensaje
+              }`;
+
+      fetch(
+        '/graphql',
+        {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json',
+          },
+          body: JSON.stringify({
+            query,
+            variables
+          })
+        })
+        .then(response => response.json())
+        .then((response) => {
+          document.getElementById('mensaje').innerHTML = response.data.mensaje;
+        })
+        .catch(console.error)
+    })();
+
+    const agregarArticulo = (event) => {
+      event.preventDefault();
+
+      query = `mutation agregarArticulo($titulo: String!, $texto: String!, $autor: String!) {
+                agregarArticulo(titulo: $titulo, texto: $texto, autor: $autor)
+              }`;
+
+      variables = {
+        "titulo": document.getElementById('titulo').value,
+        "texto": document.getElementById('texto').value,
+        "autor": document.getElementById('autor').value,
+      };
+
+      fetch(
+        '/graphql',
+        {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json',
+          },
+          body: JSON.stringify({
+            query,
+            variables
+          })
+        })
+        .then(() => {
+          document.getElementById('titulo').value = "";
+          document.getElementById('texto').value = "";
+          document.getElementById('autor').value = "";
+        })
+        .catch(console.error)
+    };
+
+    const articulos = (event) => {
+      event.preventDefault();
+
+      query = `{
+                articulos {
+                  titulo
+                  texto
+                  autor
+                }
+              }`;
+
+      fetch(
+        '/graphql',
+        {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json',
+          },
+          body: JSON.stringify({
+            query,
+          })
+        })
+        .then(resonse => resonse.json())
+        .then(result => {
+          document.getElementById('articulos').innerHTML = ""
+
+          result.data.articulos.forEach(articulo => {
+            document.getElementById('articulos').innerHTML += JSON.stringify(articulo) + "<br>"
+          });
+        })
+        .catch(console.error)
+    }
+  </script>
+</body>
+
+</html>
