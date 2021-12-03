@@ -3,8 +3,8 @@ const twilio = require('twilio');
 // ! Sandbox https://console.twilio.com/us1/develop/sms/settings/whatsapp-sandbox?frameUrl=%2Fconsole%2Fsms%2Fwhatsapp%2Fsandbox%3Fx-target-region%3Dus1
 
 const client = twilio(
-  'ACa9a943925449a45b9f8fe7056da155ee',
-  '70e18e2124d116a3cebb2f34f9158934',
+  '...',
+  '...',
 );
 
 client.messages.create(
