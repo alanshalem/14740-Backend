@@ -14,7 +14,7 @@ client.messages.create(
       'https://i0.wp.com/lanoticia.com/wp-content/uploads/2020/08/cuantos-de-estos-mitos-del-chocolate-te-alejan-de-una-barra.jpg?fit=800%2C600&ssl=1',
     ],
     from: 'whatsapp:+14155238886',
-    to: 'whatsapp:+5491133054604',
+    to: 'whatsapp:+549...',
   },
 )
   .then((message) => console.log(message.sid))
