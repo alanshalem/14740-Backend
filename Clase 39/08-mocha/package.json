@@ -1,0 +1,13 @@
+{
+  "name": "08-mocha",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "test": "mocha todos.test.js",
+    "test-manual": "node manual.js"
+  },
+  "devDependencies": {
+    "mocha": "^9.1.3"
+  }
+}
