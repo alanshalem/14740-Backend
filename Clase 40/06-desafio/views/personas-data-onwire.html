@@ -1,0 +1,68 @@
+<h1>DATA ON-WIRE</h1>
+
+<section>
+  <form onsubmit="postDataOnWire(event)">
+    <div>
+      nombre: <input type="text" id="nombre">
+    </div>
+    <div>
+      apellido: <input type="text" id="apellido">
+    </div>
+    <div>
+      DNI: <input type="number" id="dni">
+    </div>
+    <input type="submit" value="enviar">
+  </form>
+</section>
+
+<section>
+  <table>
+    <thead>
+      <tr>
+        <th>Nombre</th>
+        <th>Apellido</th>
+        <th>DNI</th>
+      </tr>
+    </thead>
+    <tbody id="table" />
+  </table>
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+<script>
+  const postDataOnWire = async (event) => {
+    // ! Importante
+    event.preventDefault();
+
+    await axios.post('/api/data-onwire',
+      {
+        nombre: document.getElementById('nombre').value,
+        apellido: document.getElementById('apellido').value,
+        dni: document.getElementById('dni').value
+      }
+    )
+
+    getDataOnWire(event);
+  }
+
+  const getDataOnWire = async (event) => {
+    // ! Importante
+    event.preventDefault();
+
+    const response = await axios.get('/api/data-json')
+
+    document.getElementById('table').innerHTML = ""
+
+    response.data.personas.forEach(element => {
+      document.getElementById('table').innerHTML = `
+${document.getElementById('table').innerHTML}
+<tr>
+  <td>${element.nombre}</td>
+  <td>${element.apellido}</td>
+  <td>${element.dni}</td>
+</tr>
+        `
+    });
+  }
+</script>

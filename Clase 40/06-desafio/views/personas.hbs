@@ -1,0 +1,37 @@
+<h1>HTML ON-WIRE</h1>
+
+<section>
+  <form action="/api/html-onwire" method="post">
+    <div>
+      nombre: <input type="text" name="nombre">
+    </div>
+    <div>
+      apellido: <input type="text" name="apellido">
+    </div>
+    <div>
+      DNI: <input type="number" name="dni">
+    </div>
+    <input type="submit" value="enviar">
+  </form>
+</section>
+
+<section>
+  <table>
+    <thead>
+      <tr>
+        <th>Nombre</th>
+        <th>Apellido</th>
+        <th>DNI</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each personas}}
+      <tr>
+        <td>{{nombre}}</td>
+        <td>{{apellido}}</td>
+        <td>{{dni}}</td>
+      </tr>
+      {{/each}}
+    </tbody>
+  </table>
+</section>
