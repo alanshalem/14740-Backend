@@ -1,0 +1,24 @@
+{
+  "name": "repository",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "agregar": "pnpx ts-node index.ts --cmd agregar --nombre Carlos --apellido Perez --DNI 23456789",
+    "buscar": "pnpx ts-node index.ts --cmd buscar",
+    "count": "pnpx ts-node index.ts --cmd count",
+    "reemplazar": "pnpx ts-node index.ts --cmd reemplazar --id 618a920b03627fcfd77944d1 --nombre Juan --apellido Perez --DNI 23456789"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "typescript": "^4.3.2"
+  },
+  "dependencies": {
+    "@types/minimist": "^1.2.1",
+    "@types/mongodb": "^3.6.17",
+    "minimist": "^1.2.5",
+    "mongodb": "^3.6.9"
+  }
+}

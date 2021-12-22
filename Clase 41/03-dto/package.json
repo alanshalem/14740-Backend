@@ -1,0 +1,18 @@
+{
+  "name": "DAO",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js --cmd buscardto --id 60c2234aca7eb81be015dc02",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@hapi/joi": "^17.1.1",
+    "minimist": "^1.2.5",
+    "mongoose": "^5.12.13"
+  }
+}

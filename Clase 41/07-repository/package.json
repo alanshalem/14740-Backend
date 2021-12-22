@@ -1,0 +1,21 @@
+{
+  "name": "repository",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "pnpx ts-node index.ts --tipo spartan --cmd reemplazar --nombre=\"He Man\" --id 60c415846d9d4e1d94bad46d --valor 1000"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "typescript": "^4.3.2"
+  },
+  "dependencies": {
+    "@types/minimist": "^1.2.1",
+    "@types/mongodb": "^3.6.17",
+    "minimist": "^1.2.5",
+    "mongodb": "^3.6.9"
+  }
+}
