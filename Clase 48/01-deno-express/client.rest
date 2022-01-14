@@ -1,0 +1,36 @@
+GET /api/products HTTP/1.1
+host: localhost:8080
+
+###
+
+GET /api/products/1 HTTP/1.1
+host: localhost:8080
+
+###
+
+POST /api/products HTTP/1.1
+host: localhost:8080
+Content-Type: application/json
+
+{
+  "name": "Product X",
+  "description": "Description of Product X",
+  "price": 100
+}
+
+###
+
+PUT /api/products/2 HTTP/1.1
+host: localhost:8080
+Content-Type: application/json
+
+{
+  "name": "Product 8",
+  "description": "Producto actualizado",
+  "price": 2
+}
+
+###
+
+DELETE /api/products/1 HTTP/1.1
+host: localhost:8080
