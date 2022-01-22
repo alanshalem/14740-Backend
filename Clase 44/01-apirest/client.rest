@@ -1,0 +1,99 @@
+POST /noticias HTTP/1.1
+Host: localhost:8080
+Content-Type: application/json
+X-Request-Type: GraphQL
+
+{
+    noticias {
+        _id
+        titulo
+        cuerpo
+        autor
+        imagen
+        email
+        vista
+    }
+}
+
+###
+
+POST /noticias HTTP/1.1
+Host: localhost:8080
+Content-Type: application/json
+X-Request-Type: GraphQL
+
+query {
+    noticias(_id: "8") {
+        _id
+        titulo
+        cuerpo
+        autor
+        imagen
+        email
+        vista
+    }
+}
+
+###
+
+POST /noticias HTTP/1.1
+Host: localhost:8080
+Content-Type: application/json
+X-Request-Type: GraphQL
+
+mutation {
+    guardarNoticia(
+        titulo : "Hola",
+        cuerpo: "Mundo",
+        autor: "DS",
+        imagen: "https://cdn3.iconfinder.com/data/icons/business-avatar-1/512/7_avatar-256.png",
+        email: "d@s",
+        vista: false) {
+            _id
+            titulo
+            cuerpo
+            autor
+            imagen
+            email
+            vista
+    }
+}
+
+###
+
+POST /noticias HTTP/1.1
+Host: localhost:8080
+Content-Type: application/json
+X-Request-Type: GraphQL
+
+mutation {
+    borrarNoticia(_id:"2") {
+        _id
+        titulo
+        cuerpo
+        autor
+        imagen
+        email
+        vista
+    }
+}
+
+###
+
+POST /noticias HTTP/1.1
+Host: localhost:8080
+Content-Type: application/json
+X-Request-Type: GraphQL
+
+mutation {
+    actualizarNoticia(_id:"4",vista: true) {
+        _id
+        titulo
+        cuerpo
+        autor
+        imagen
+        email
+        vista
+    }
+}
+
