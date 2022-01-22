@@ -1,0 +1,29 @@
+POST /palabras HTTP/1.1
+Host: localhost:8080
+Content-Type: application/json
+X-Request-Type: GraphQL
+
+query {
+    palabras {
+        palabras
+    }
+}
+
+###
+
+POST /palabras HTTP/1.1
+Host: localhost:8080
+Content-Type: application/json
+X-Request-Type: GraphQL
+
+mutation guardarPalabra($palabra: String!) {
+    guardarPalabra( palabra: $palabra) {
+        _id
+        timestamp
+        palabra
+    }
+}
+
+{
+    "palabra": "qweqweqw"
+}

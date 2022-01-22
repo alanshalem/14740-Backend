@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Send palabra</title>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/faker@5.5.3/dist/faker.min.js"></script>
+</head>
+
+<body>
+  <script>
+    (async (palabra) => {
+      try {
+        const body = {
+          query: `
+                        mutation guardarPalabra($palabra: String!) {
+                            guardarPalabra( palabra: $palabra){
+                                _id
+                                timestamp
+                                palabra
+                            }
+                        }
+                    `,
+          variables: {
+            palabra,
+          },
+        };
+
+        const options = {
+          headers: {
+            "Content-Type": "application/json",
+          },
+        };
+
+        const response = await axios.post(
+          // ! VSCode PORT
+          "http://localhost:8080/palabras",
+          body,
+          options
+        );
+
+        const {
+          data: {
+            data: { guardarPalabra: palabraIncorporada },
+          },
+        } = response;
+
+        console.log(palabraIncorporada);
+      } catch (error) {
+        console.error(error);
+      }
+
+      console.log(palabra);
+    })(faker.random.word());
+  </script>
+</body>
+
+</html>
